@@ -1,7 +1,7 @@
 # GENRIFT Backend — Proxy + Token Gate
 
-Backend server untuk GENRIFT AI Generation Protocol.  
-Menyembunyikan Anthropic API key dari user dan mengatur akses berdasarkan $RIFT token balance.
+Backend server for the GENRIFT AI Generation Protocol.  
+Hides the Anthropic API key from users and manages access based on $RIFT token balance.
 
 ---
 
@@ -89,7 +89,7 @@ x-wallet-signature: <bs58 signature>
 
 ## Deployment
 
-### Hostinger VPS (lo punya)
+### Hostinger VPS
 ```bash
 # Upload project
 scp -r genrift-backend/ user@your-vps:/var/www/
@@ -102,7 +102,7 @@ pm2 start src/index.js --name genrift-backend
 pm2 save
 ```
 
-### ENV Variables di VPS
+### ENV Variables on VPS
 ```bash
 nano .env
 # Set ANTHROPIC_API_KEY, FRONTEND_URL, SOLANA_RPC
@@ -112,9 +112,9 @@ nano .env
 
 ## Token Gate Notes
 
-- $RIFT token mint belum dikonfigurasi → semua user dapat FREE tier
-- Set `RIFT_TOKEN_MINT` di .env setelah token launch di pump.fun
-- Untuk testing: set `RIFT_HOLDER_MIN=0` biar semua wallet dapat HOLDER tier
+- \$RIFT token mint not configured yet ? all users get FREE tier
+- Set `RIFT_TOKEN_MINT` in .env after token launch on pump.fun
+- For testing: set `RIFT_HOLDER_MIN=0` so all wallets get HOLDER tier
 
 ---
 
