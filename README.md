@@ -89,7 +89,7 @@ x-wallet-signature: <bs58 signature>
 
 ## Deployment
 
-### Hostinger VPS
+### VPS Deployment
 ```bash
 # Upload project
 scp -r genrift-backend/ user@your-vps:/var/www/
